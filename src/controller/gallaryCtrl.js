@@ -53,6 +53,7 @@ const gallaryCtrl = {
         if(!id){
             return res.status(403).json({message: 'insufficient information'})
         }
+        
         try {
             const deleteGall = await Gallary.findByIdAndDelete(id)
             if(!deleteGall){
