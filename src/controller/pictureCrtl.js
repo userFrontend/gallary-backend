@@ -115,7 +115,7 @@ const pictureCtrl = {
                     }
                 })
             }
-            res.status(200).json({message: 'Picture delete successfully'})
+            res.status(200).json({message: 'Picture delete successfully', deletePc})
         } catch (error) {
             res.status(503).json({message: error.message})
         }
