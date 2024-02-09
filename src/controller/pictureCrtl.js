@@ -104,7 +104,7 @@ const pictureCtrl = {
     delete: async (req, res) => {
         const {id} = req.params
         try {
-            const deletePc = await Picture.findOneAndDelete(id);
+            const deletePc = await Picture.findByIdAndDelete(id);
             if(!deletePc) {
                 return res.status(404).json({message: 'Picture not found'})
             }
