@@ -63,7 +63,7 @@ const pictureCtrl = {
         try {
             const updatePic = await Picture.findById(id)
             if(!updatePic){
-                res.status(404).send('Picture not found')
+                return res.status(404).send('Picture not found')
             }
             if(req.files){
             const {image} = req.files;
